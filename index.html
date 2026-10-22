@@ -6,7 +6,9 @@
 <meta name="description" content="Concepts at Scale explains system design visually, for engineers who want to think like architects.">
 <meta property="og:title" content="Concepts at Scale">
 <meta property="og:description" content="Concepts at Scale explains system design visually, for engineers who want to think like architects.">
-<meta property="og:image" content="og-image.png">
+<meta property="og:image" content="https://conceptsatscale.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ConceptsAtScale">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <title>Concepts at Scale</title>
@@ -130,6 +132,26 @@ a.card:hover{border-color:var(--signal)}
 
 footer{padding-block:40px 56px; color:var(--muted); font-size:15px; display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; border-top:1px solid var(--line); margin-top:64px}
 footer .mono{font-family:var(--mono); font-size:13px}
+
+
+/* quote */
+.quote{padding-block:40px 24px}
+.quote figure{margin:0; position:relative; background:var(--surface); border:1px solid var(--line); border-radius:28px; padding:56px clamp(24px,6vw,72px) 44px; overflow:hidden}
+.quote figure::before{content:""; position:absolute; inset:0; z-index:0; opacity:0.6;
+  background:repeating-linear-gradient(30deg, transparent 0 43px, var(--grid) 43px 44px), repeating-linear-gradient(150deg, transparent 0 43px, var(--grid) 43px 44px);
+  -webkit-mask-image:radial-gradient(ellipse at 85% 50%, #000 0, transparent 60%); mask-image:radial-gradient(ellipse at 85% 50%, #000 0, transparent 60%)}
+.quote .mark{position:relative; z-index:1; font-family:var(--display); font-weight:700; font-size:120px; line-height:0.6; color:var(--signal); display:block; height:48px}
+.quote blockquote{position:relative; z-index:1; margin:0; max-width:30em}
+.quote blockquote p{margin:0; font-family:var(--display); font-weight:500; color:var(--fg); font-size:clamp(24px,3.4vw,38px); line-height:1.25; letter-spacing:-0.015em; text-wrap:balance}
+.quote blockquote em{font-style:normal; color:var(--accent)}
+.quote figcaption{position:relative; z-index:1; margin-top:28px; display:flex; flex-wrap:wrap; align-items:center; gap:6px 14px}
+.quote figcaption b{font-family:var(--display); color:var(--fg); font-size:18px}
+.quote figcaption span{font-family:var(--mono); font-size:13px; letter-spacing:0.04em; color:var(--muted)}
+.quote figcaption i{width:28px; height:3px; background:var(--signal); border-radius:2px; display:inline-block}
+footer .links{display:flex; gap:20px}
+footer .links a{color:var(--muted); text-decoration:none; border-bottom:1px solid var(--line)}
+footer .links a:hover{color:var(--fg); border-color:var(--signal)}
+.contact p a{color:inherit; text-underline-offset:3px}
 </style>
 <style>body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
 </head>
@@ -1489,6 +1511,7 @@ footer .mono{font-family:var(--mono); font-size:13px}
     </a>
     <nav aria-label="Main">
       <a class="hide-sm" href="#about">About</a>
+      <a href="https://x.com/ConceptsAtScale" target="_blank" rel="noopener" aria-label="Concepts at Scale on X">X</a>
       <a class="btn small" href="https://www.youtube.com/@ConceptsAtScale" target="_blank" rel="noopener"><span class="play" aria-hidden="true"></span>Subscribe</a>
     </nav>
   </div>
@@ -2859,6 +2882,16 @@ footer .mono{font-family:var(--mono); font-size:13px}
     </div>
   </section>
 
+  <section class="quote" aria-label="Quote">
+    <figure>
+      <span class="mark" aria-hidden="true">&ldquo;</span>
+      <blockquote>
+        <p>A distributed system is one in which the failure of a computer <em>you didn&rsquo;t even know existed</em> can render your own computer unusable.</p>
+      </blockquote>
+      <figcaption><i aria-hidden="true"></i><b>Leslie Lamport</b><span>Turing Award winner · written in 1987</span></figcaption>
+    </figure>
+  </section>
+
   <section id="about" aria-labelledby="about-title">
     <div class="about">
       <div>
@@ -2879,7 +2912,7 @@ footer .mono{font-family:var(--mono); font-size:13px}
     <div class="contact">
       <div>
         <h2 id="contact-title">Work with Concepts at Scale</h2>
-        <p>For collaborations, sponsorships or topic suggestions, send an email.</p>
+        <p>For collaborations, sponsorships or topic suggestions, send an email. For daily system design posts, follow <a href="https://x.com/ConceptsAtScale" target="_blank" rel="noopener">@ConceptsAtScale on X</a>.</p>
       </div>
       <div class="mail">
         <code id="email">conceptsatscale@gmail.com</code>
@@ -2890,7 +2923,7 @@ footer .mono{font-family:var(--mono); font-size:13px}
 
   <footer>
     <span>© 2026 Concepts at Scale</span>
-    <span class="mono">youtube.com/@ConceptsAtScale</span>
+    <span class="links mono"><a href="https://www.youtube.com/@ConceptsAtScale" target="_blank" rel="noopener">YouTube</a><a href="https://x.com/ConceptsAtScale" target="_blank" rel="noopener">X (Twitter)</a></span>
   </footer>
 </main>
 
